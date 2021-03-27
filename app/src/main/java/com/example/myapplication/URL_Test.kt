@@ -26,7 +26,7 @@ class URL_Test : AppCompatActivity() {
         // 텍스트가 실시간으로 바뀌는것을 인식함.
         editText.addTextChangedListener(object : TextWatcher {
             override fun afterTextChanged(p0: Editable?) {
-                TODO("Not yet implemented.")
+                TODO("Not yet implemented")
             }
 
             override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
