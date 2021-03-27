@@ -10,7 +10,7 @@ import androidx.fragment.app.Fragment
 
 class Fragment1 : Fragment(){
     override fun onAttach(context: Context) {
-        Log.d("life_cycle", "onAttach");
+        Log.d("life_cycle", "onAttach.");
 
         super.onAttach(context)
 

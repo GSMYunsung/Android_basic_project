@@ -33,7 +33,7 @@ class FragmentActivity : AppCompatActivity() {
 
     override fun onDestroy() {
         super.onDestroy()
-        Log.d("life_cycle", "F onDestroy");
+        Log.d("life_cycle", "F onDestroy.");
     }
 
 
