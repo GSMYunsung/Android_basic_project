@@ -1,0 +1,24 @@
+
+
+Null Safety
+ -> Null에 대해서 안전하다
+ -> 코들린의 특징
+
+Null Vs 0
+ -> 0 : 휴지를 다 쓰고 휴지심만 남은 상태
+ -> Null : 휴지심도 없는상태, 존재하지 않는 상태, 모르는 상태
+
+Null이 할당되면 -> NullPointExceptionError 발생!
+
+코틀린이 Null Safety하기 위해서 사용하는 문법
+-> ? : Null이 아니라면 이하구문 실행
+-> !! : Null이 아님을 개발자가 보장함!
+
+사용방법
+
+button?.SetOnClickLinstener
+button!!.SetOnClickLinstener
+
+Null이 될 수 있는 타입
+-Int, Double, Float, Class -> Null이 될 수 없는타입
+-Int?,Double?,Float?,Class? -> Null이 될 수 있는타입
