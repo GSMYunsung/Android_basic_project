@@ -13,13 +13,38 @@
         android:text="안녕하세요!!"
         android:textSize="50dp"/>
 
-    <!-- Fragment를 사용할 때에는 반드시 이름을 지정 해주어야한다.-->
-    <fragment
 
-        android:name="com.example.myapplication.Fragment1"
+<!--    &lt;!&ndash; Fragment를 사용할 때에는 반드시 쓰는곳 이름을 지정 해주어야한다.&ndash;&gt;-->
+<!--    <fragment-->
+
+<!--        android:name="com.example.myapplication.Fragment1"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="300dp">-->
+
+<!--    </fragment>-->
+
+    <Button
+        android:id="@+id/buttonn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="나와라! ">
+    </Button>
+
+    <Button
+        android:id="@+id/buttonn2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="사라져! ">
+    </Button>
+
+    <LinearLayout
+        android:id="@+id/container"
         android:layout_width="match_parent"
-        android:layout_height="300dp">
+        android:layout_height="200dp"
+        android:background="#6BE8DE"
+        android:orientation="vertical">
+    </LinearLayout>
 
-    </fragment>
+
 
 </LinearLayout>
