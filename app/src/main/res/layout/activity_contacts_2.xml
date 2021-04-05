@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+<LinearLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/black"
+    tools:context=".Contacts_2">
+
+        <Button
+            android:id="@+id/back"
+            android:paddingLeft="10dp"
+            android:textColor="@color/white"
+            android:background="@color/black"
+            android:textSize="35dp"
+            android:text="back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <ImageView
+            android:layout_marginTop="80dp"
+            android:layout_marginLeft="74dp"
+            android:src="@drawable/team"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/man_num"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:textSize="50dp"
+            android:text="Number_"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/man_name"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Name_"
+            android:textSize="50dp" />
+
+    </LinearLayout>
+</layout>
