@@ -6,9 +6,11 @@ import android.text.Layout
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.appcompat.view.menu.MenuView
 import androidx.databinding.DataBindingUtil
+import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.myapplication.databinding.ActivityContacts2Binding
 import com.example.myapplication.databinding.ActivityRecyclerViewBinding
@@ -26,6 +28,11 @@ class RecyclerViewActivity : AppCompatActivity() {
             carList.add(CarForList("" + i + "번째 자동차", "" + i + "순위엔진"))
         }
         val adapter = RecyclerViewAdapter(carList, LayoutInflater.from(this@RecyclerViewActivity))
+
+        //어뎁터로 두 듀 Layout을 연결해주고, 레이아웃메니저에 넣어서 리사이클러뷰 관리
+
+        //recycler_view.adapter= adapter
+        //recycler_view.layoutManager = LinearLayoutManager(this@RecyclerViewActivity)
 
     }
 }
