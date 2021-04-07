@@ -27,7 +27,7 @@ class AddViewActivity : AppCompatActivity() {
         for (i in 0 until carList.size){
             // 위에서 만들어준 리스트 아이템을 각각의 뷰에 넣을 준비
             val itemView = inflater.inflate(R.layout.item_view, null)
-            val CarNameView = itemView.findViewById<TextView>(R.id.carname)
+            val CarNameView = itemView.findViewById<TextView>(R.id.car_name)
             val carengineView = itemView.findViewById<TextView>(R.id.car_engine)
 
             //리스트에서 각각의 순서에 맞는 구성요소를 클래스에서 받아오기
