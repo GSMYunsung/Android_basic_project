@@ -12,20 +12,21 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Contacts">
+        <activity android:name=".TabPagerActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".AddViewActivity" />
-        <activity android:name=".Library">
+        <activity android:name=".Contacts_2" />
+        <activity android:name=".Contacts"></activity>
+        <activity android:name=".AddViewActivity">
         </activity>
-        <activity android:name=".ThreadActivity" />
+        <activity android:name=".Library" />
         <activity android:name=".Context" />
         <activity android:name=".NullSafty" />
-        <activity android:name=".FragmentActivity" />
+        <!--<activity android:name=".FragmentActivity" />-->
         <activity android:name=".URL_Test" />
         <activity android:name=".Intent2" />
         <activity android:name=".Intent1" />
