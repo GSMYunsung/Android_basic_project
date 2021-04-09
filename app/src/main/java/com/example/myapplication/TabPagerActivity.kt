@@ -8,9 +8,11 @@ import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentStatePagerAdapter
+import androidx.viewpager.widget.ViewPager
 import androidx.viewpager2.adapter.FragmentStateAdapter
 import com.example.myapplication.databinding.ActivityTabPagerBinding
 import com.example.myapplication.databinding.FragmentoneBinding
+import com.google.android.material.tabs.TabLayout
 import java.text.FieldPosition
 
 class TabPagerActivity : AppCompatActivity() {
@@ -20,14 +22,36 @@ class TabPagerActivity : AppCompatActivity() {
         setContentView(R.layout.activity_tab_pager)
         binding = DataBindingUtil.setContentView(this, R.layout.activity_tab_pager)
 
+//-----------------------------------------------------------------------------------------Tablayout
         //탭의 개수를 지정할 수 있다.
         //AddTab에 새로운 Tab을 더해주어서 이름이 ONE인 새로운탭을 만들었다.
         binding.TabLayout.addTab(binding.TabLayout.newTab().setText("ONE"))
         binding.TabLayout.addTab(binding.TabLayout.newTab().setText("TWO"))
         binding.TabLayout.addTab(binding.TabLayout.newTab().setText("THREE"))
+
+        val pagerAdapter = PagerAdapter(supportFragmentManager,3)
+        binding.ViewPager.adapter = pagerAdapter
+
+        binding.TabLayout.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener{
+            override fun onTabReselected(tab: TabLayout.Tab?) {
+                //Tab이 다시 선택되었을때 행동
+            }
+
+            override fun onTabUnselected(tab: TabLayout.Tab?) {
+
+            }
+
+            override fun onTabSelected(tab: TabLayout.Tab?) {
+                //Tab이 선택되었을 때 행동
+                binding.ViewPager.currentItem = tab!!.position
+            }
+        })
+        //화면이 바뀌는걸 인식해서, 탭바를 해당 위치로 옮겨준다.
+        binding.ViewPager.addOnPageChangeListener(TabLayout.TabLayoutOnPageChangeListener(binding.TabLayout))
     }
 }
 
+// ----------------------------------------------------------------------------------- Fragment
 // 어뎁터가 프레그먼트를 받아온다, 즉 Pager가 프레그먼트로 구성되어있다.
 class PagerAdapter(
     fragmentManager: FragmentManager,
