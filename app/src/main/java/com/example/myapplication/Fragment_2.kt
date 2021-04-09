@@ -22,7 +22,7 @@ class Fragment_2 : Fragment(){
         // container -> 부모 뷰, 즉, 프라그먼트가 어디에 그려질지 지정해줌.
         // Fragment가 activity보다 먼저 호출된다.
         Log.d("life_cycle", "onCreateView");
-        binding = DataBindingUtil.inflate(inflater,R.layout.fragmentone,container,false)
+        binding = DataBindingUtil.inflate(inflater,R.layout.fragment_2,container,false)
         return binding.root
     }
 }
