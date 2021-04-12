@@ -1,0 +1,39 @@
+
+
+데이터 베이스
+- 데이터를 저장하기 위한
+
+데이터 저장방식
+- RDB (Relational Database)
+    - 관계형 데이터 베이스
+    - 엑셀을 연상시키면 이해하기 편하다.
+
+    이름  학번  학교  성별
+    윤성   1   서울  남
+    태웅   2   경상도 남
+
+- key_Value 방식
+    - 쌍으로 저장하는 방식 (key_Value를 쌍으로 저장함)
+
+- RDBMS
+    - Relataional Database Management system
+    - RDB를 관리하기 위한 툴
+    - MySQL
+    - Oracle
+    - PostGreSQL
+
+- SQL
+    - RDBMS를 위한 언어이다.
+
+- NoSQL
+    - SQL에서 벗어나보자!
+    - Key_Value 방식은 NoSQL을 이용한다.
+
+- 안드로이드 데이터베이스
+    - SQLLiteDatabase
+    - SharePreference
+        - Key_Value 방식
+        - 앱의 설정들 ex) 다크모드, 오름차순 정렬 즉, 가볍게 사용하기위한 데이터베이스
+        - 하드한 데이터베이스는 구축이 되지 않는다!
+        - 목적 : 공유된 사용자의 기호를 저장!
+
