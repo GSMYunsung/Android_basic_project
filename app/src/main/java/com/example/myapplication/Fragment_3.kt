@@ -7,10 +7,11 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
+import com.example.myapplication.databinding.Fragment3Binding
 import com.example.myapplication.databinding.FragmentoneBinding
 
 class Fragment_3 : Fragment(){
-    private lateinit var binding : FragmentoneBinding
+    private lateinit var binding : Fragment3Binding
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
