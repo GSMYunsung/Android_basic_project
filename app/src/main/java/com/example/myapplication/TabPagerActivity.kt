@@ -29,7 +29,8 @@ class TabPagerActivity : AppCompatActivity() {
         binding.TabLayout.addTab(binding.TabLayout.newTab().setText("TWO"))
         binding.TabLayout.addTab(binding.TabLayout.newTab().setText("THREE"))
 
-        val pagerAdapter = PagerAdapter(supportFragmentManager,3)
+        //탭을 만들어준다!
+        val pagerAdapter = FragmentPagerAdapter(supportFragmentManager,3)
         binding.ViewPager.adapter = pagerAdapter
 
         binding.TabLayout.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener{
@@ -53,7 +54,7 @@ class TabPagerActivity : AppCompatActivity() {
 
 // ----------------------------------------------------------------------------------- Fragment
 // 어뎁터가 프레그먼트를 받아온다, 즉 Pager가 프레그먼트로 구성되어있다.
-class PagerAdapter(
+open class FragmentPagerAdapter(
     fragmentManager: FragmentManager,
     val tabCount:Int
 ): FragmentStatePagerAdapter(fragmentManager){
