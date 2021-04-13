@@ -4,6 +4,7 @@ package com.example.myapplication
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
@@ -44,6 +45,7 @@ class TabPagerActivity : AppCompatActivity() {
 
             override fun onTabSelected(tab: TabLayout.Tab?) {
                 //Tab이 선택되었을 때 행동
+                // currentItem으로 탭의 포지션값을 받아서 Fragment를 넘겨준다.
                 binding.ViewPager.currentItem = tab!!.position
             }
         })
@@ -54,6 +56,10 @@ class TabPagerActivity : AppCompatActivity() {
 
 // ----------------------------------------------------------------------------------- Fragment
 // 어뎁터가 프레그먼트를 받아온다, 즉 Pager가 프레그먼트로 구성되어있다.
+// Adapter 기본요소
+//  - getItem - 아이템 리턴
+//  - getCount - 페이지수 리턴
+
 open class FragmentPagerAdapter(
     fragmentManager: FragmentManager,
     val tabCount:Int
@@ -77,6 +83,7 @@ open class FragmentPagerAdapter(
 
     override fun getCount(): Int {
         //전체 크기를 리턴해준다. 즉. 페이지수를 리턴해준다.
+        //페이지를 넘길때마다 값을 넘겨주어서 모든 프레그먼트를 로딩해준다.
         return tabCount
     }
 }

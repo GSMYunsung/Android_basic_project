@@ -10,10 +10,37 @@
         android:layout_height="match_parent"
         tools:context=".SharedPrefarenceActivity">
 
+        <EditText
+            android:id="@+id/edit_text"
+            android:hint="값을 입력하세요!"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"/>
+
         <Button
-            android:id="@+id/button_1"
+            android:text="저장"
+            android:id="@+id/save_btm"
             android:layout_width="100dp"
             android:layout_height="100dp"/>
+
+        <Button
+            android:text="불러오기"
+            android:id="@+id/lode_btm"
+            android:layout_width="100dp"
+            android:layout_height="100dp"/>
+
+        <Button
+            android:text="부분 삭제"
+            android:id="@+id/delete_btm"
+            android:layout_width="100dp"
+            android:layout_height="100dp"/>
+
+        <Button
+            android:text="전체 삭제"
+            android:id="@+id/all_delete_btm"
+            android:layout_width="100dp"
+            android:layout_height="100dp"/>
+
+
 
     </LinearLayout>
 </layout>
