@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".Async">
+
+        <TextView
+            android:id="@+id/ment"
+            android:textSize="40dp"
+            android:text="Async_Task"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <ProgressBar
+            android:id="@+id/progressber"
+            android:max="100"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/start"
+                android:text="시작"
+                android:layout_marginTop="30dp"
+                android:layout_width="100dp"
+                android:layout_height="50dp"/>
+
+            <Button
+                android:id="@+id/stop"
+                android:text="종료"
+                android:layout_marginTop="30dp"
+                android:layout_width="100dp"
+                android:layout_height="50dp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>
